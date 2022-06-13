@@ -18,6 +18,24 @@ body::after{
     z-index: -1;
 }
 
+body > a{
+    position: absolute;
+    left: 1rem;
+    top: 1rem;
+    text-decoration: none;
+    color: aqua;
+    font-size: 40px;
+    font-weight: bold;
+    letter-spacing: 7px;
+    font-family: monospace;
+
+    transition: .3s ease-in;
+}
+
+body > a:hover{
+    color: white;
+}
+
 .container{
     color: white;
     font-size: 2rem;
@@ -149,12 +167,20 @@ button i{
 /* #search-input, .loading */
 
 @media screen and (max-width : 600px){
+
+    body > a{
+        left: 50%;
+        top: 2rem;
+        transform: translateX(-50%);
+    }
+    
     .container{
         width: 90%;
         margin: 0 auto;
+
     }
     #search-input, .loading{
-        width: 80%;
+        width: 65%;
     }
     .details{
         width: 100%;
@@ -168,3 +194,4 @@ button i{
     }
     
 }
+
